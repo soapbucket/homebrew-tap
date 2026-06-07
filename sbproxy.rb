@@ -1,5 +1,5 @@
 class Sbproxy < Formula
-  desc "AI Governance Gateway: one self-hostable runtime for AI traffic, APIs, MCP, and crawlers"
+  desc "Reverse proxy that doubles as an AI gateway for APIs, MCP, and crawlers"
   homepage "https://sbproxy.dev"
   license "BUSL-1.1"
   version "1.1.0"
