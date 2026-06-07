@@ -7,7 +7,7 @@ class Sbproxy < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_darwin_arm64.tar.gz"
-      sha256 "47a513c934b8ebc219b11376da771425937277cf58396d2d26c13c06ccadef7e"
+      sha256 "0fe345dc5395262f7625847341c5da353da9a1730822860b935132709d691bc1"
     else
       odie <<~EOS
         sbproxy v#{version} does not ship a darwin/amd64 (Intel Mac) bottle.
@@ -26,10 +26,10 @@ class Sbproxy < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_linux_arm64.tar.gz"
-      sha256 "979f81c46327196e9cfce0149ca9e9580cac8adc9bb0311241109494c1ddde90"
+      sha256 "895a70e2421f4793f150d1040aeeba2737ff39ae78a34da20e9c515e342ff149"
     else
       url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_linux_amd64.tar.gz"
-      sha256 "705ce95da43a247a53d25804f473de3713cb2c04c18354fd1a3f1f7ec7222850"
+      sha256 "314d37138bc574498c3482f62b92ff95c0a1d21c0f45e3eece554385e9a7bae8"
     end
   end
 
