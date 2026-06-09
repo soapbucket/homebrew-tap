@@ -1,7 +1,7 @@
 class Sbproxy < Formula
   desc "Reverse proxy that doubles as an AI gateway for APIs, MCP, and crawlers"
   homepage "https://sbproxy.dev"
-  license "BUSL-1.1"
+  license "Apache-2.0"
   version "1.1.0"
 
   on_macos do

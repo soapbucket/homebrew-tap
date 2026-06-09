@@ -7,7 +7,6 @@
 class Mcptest < Formula
   desc "Open source CLI for testing Model Context Protocol servers"
   homepage "https://mcptest.sh"
-  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
