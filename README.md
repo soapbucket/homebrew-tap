@@ -11,24 +11,6 @@ brew tap soapbucket/tap
 
 ## Formulae
 
-### mcptest
-
-[mcptest](https://mcptest.sh) is an open source CLI for testing Model Context
-Protocol (MCP) servers: service calls, the agent loop, schema drift,
-compliance, and security, run in CI on every commit.
-
-```bash
-brew install soapbucket/tap/mcptest
-brew upgrade mcptest
-
-mcptest run --config tests/smoke.yml   # run a YAML test suite
-mcptest --version
-```
-
-Links: [Website](https://mcptest.sh) ·
-[Documentation](https://mcptest.sh/docs) ·
-[GitHub](https://github.com/soapbucket/mcptest)
-
 ### sbproxy
 
 [SBproxy](https://sbproxy.dev) is the AI gateway built like a real proxy.
@@ -52,4 +34,4 @@ Links: [Website](https://sbproxy.dev) ·
 ## License
 
 This tap's packaging is Apache-2.0 (see [LICENSE](LICENSE)). The installed
-software is Apache-2.0 as well: both mcptest and sbproxy are Apache-2.0.
+software is Apache-2.0 as well: sbproxy is Apache-2.0.
