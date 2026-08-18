@@ -2,12 +2,12 @@ class Sbproxy < Formula
   desc "AI gateway and reverse proxy for APIs, MCP, models, and crawlers"
   homepage "https://sbproxy.dev"
   license "Apache-2.0"
-  version "1.11.0"
+  version "1.12.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_darwin_arm64.tar.gz"
-      sha256 "f31cfbd586e7934ad199ef6b59f1f71b133a3362b01519197f0608fe5da91c72"
+      sha256 "443a596baf14ede787ac00c7f11915c32a1ee4caac5f1e7fdbbd7f28044ee6eb"
     else
       odie <<~EOS
         sbproxy v#{version} does not ship a darwin/amd64 (Intel Mac) bottle.
@@ -26,10 +26,10 @@ class Sbproxy < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_linux_arm64.tar.gz"
-      sha256 "a7227071a52d84e680882091ef0476ea6ff337c4e96b20c53c316c49806307b3"
+      sha256 "34a093cd8ce5a3f8855fd2a0255d7275bfbe5e715c20648eb46ab43df3e59e65"
     else
       url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_linux_amd64.tar.gz"
-      sha256 "2c1bb2e4525fc6c620b6175d08b9645c6caf1cb58ce686909915f8173d666420"
+      sha256 "b2e3ef61dafe4afafe6fe32ed4023602e1fc201dd13573b447b2320d57d9c479"
     end
   end
 
