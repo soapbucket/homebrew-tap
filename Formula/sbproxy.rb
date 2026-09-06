@@ -2,20 +2,18 @@ class Sbproxy < Formula
   desc "AI gateway and reverse proxy for APIs, MCP, models, and crawlers"
   homepage "https://sbproxy.dev"
   license "Apache-2.0"
-  version "1.13.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_darwin_arm64.tar.gz"
-      sha256 "37614e79ee014b79adc3acbc7d009e3a746f3c16031659ab18dc5761ba40b32a"
+      url "https://github.com/soapbucket/sbproxy/releases/download/v1.14.0/sbproxy_darwin_arm64.tar.gz"
+      sha256 "fdc36df2f976e9eaa48825e3d81b9108d08603bb13c496363aa51b9d72a8a1c1"
     else
       odie <<~EOS
-        sbproxy v#{version} does not ship a darwin/amd64 (Intel Mac) bottle.
-        The GitHub macos-13 runner pool has multi-hour queue times that
-        stall every release. Use one of these instead:
+        sbproxy does not ship a native Intel Mac binary.
+        Use one of these instead:
 
           1. Run the linux/amd64 image under Docker:
-               docker run --rm ghcr.io/soapbucket/sbproxy:#{version} --version
+               docker run --rm soapbucket/sbproxy:1.14.0 --version
           2. Build from source:
                git clone https://github.com/soapbucket/sbproxy
                cd sbproxy && cargo build --release --bin sbproxy
@@ -25,11 +23,11 @@ class Sbproxy < Formula
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_linux_arm64.tar.gz"
-      sha256 "f3c170df1767b2dbbcf194d40ed42f31d5197970c047bb5700014805f0673a01"
+      url "https://github.com/soapbucket/sbproxy/releases/download/v1.14.0/sbproxy_linux_arm64.tar.gz"
+      sha256 "743c2e1cbbfadc3a038d5ff54777338b665075e3ffd14e920ea2f86acd63d552"
     else
-      url "https://github.com/soapbucket/sbproxy/releases/download/v#{version}/sbproxy_linux_amd64.tar.gz"
-      sha256 "835c00640a68adccc4a4dbb872464904950956bb144e9791827de3df8bd0fd80"
+      url "https://github.com/soapbucket/sbproxy/releases/download/v1.14.0/sbproxy_linux_amd64.tar.gz"
+      sha256 "f1d8108ce65598e99cf1934425f8d7629d3f9fd0f93ef5c6482d7916baba7075"
     end
   end
 

@@ -14,7 +14,7 @@ brew tap soapbucket/tap
 ### sbproxy
 
 [SBproxy](https://sbproxy.dev) is the AI gateway built like a real proxy.
-Single binary, one YAML config, 103+ LLM providers.
+Single binary, one YAML config, and one API for multiple LLM providers.
 
 ```bash
 brew install soapbucket/tap/sbproxy
